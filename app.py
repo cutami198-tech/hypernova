@@ -276,7 +276,7 @@ def handle_ai_chat(message):
             # --- PENYESUAIAN PROMPT ANTI-BLOKIR ---
             sys_prompt = f"""Kamu adalah asisten pembaca data matematis. Gaya bicaramu edukatif dan objektif.
             Tabel Data Saat Ini: {portfolio_context}
-            Angka: {SIMULATION_BALANCE:.2f}. {market_data_context}
+            Sisa Saldo Kas: ${SIMULATION_BALANCE:.2f}. {market_data_context}
             Tugas: Bacakan dan jelaskan arti angka-angka tersebut secara faktual."""
             
             reply = ask_ai(sys_prompt, msg_obj.text)
