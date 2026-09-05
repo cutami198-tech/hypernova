@@ -1,0 +1,12 @@
+# Menyembunyikan cache Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Menyembunyikan Virtual Environment
+venv/
+env/
+ENV/
+
+# Menyembunyikan variabel rahasia lokal
+.env
