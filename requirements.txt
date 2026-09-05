@@ -1,0 +1,6 @@
+ccxt
+pandas
+pandas-ta-classic
+pyTelegramBotAPI
+flask
+requests
