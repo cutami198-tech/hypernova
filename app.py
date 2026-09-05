@@ -114,7 +114,7 @@ def ask_ai(system_prompt, user_prompt):
             "temperature": 0.4
         }
         url = "https://api.fireworks.ai/inference/v1/chat/completions"
-        res = requests.post(url, json=payload, headers=headers, timeout=45)
+        res = requests.post(url, json=payload, headers=headers, timeout=90)
         
         if res.status_code != 200: return f"*(Error HTTP {res.status_code}: {res.text[:200]})*"
         try: return res.json()['choices'][0]['message']['content'].strip()
