@@ -106,14 +106,14 @@ def ask_ai(system_prompt, user_prompt):
     try:
         headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
         payload = {
-            "model": "claude-opus-5", 
+            "model": "accounts/fireworks/models/glm-5p3", 
             "messages": [
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt}
             ],
             "temperature": 0.4
         }
-        url = "https://agentrouter.org/v1/chat/completions"
+        url = "https://api.fireworks.ai/inference/v1/chat/completions"
         res = requests.post(url, json=payload, headers=headers, timeout=45)
         
         if res.status_code != 200: return f"*(Error HTTP {res.status_code}: {res.text[:200]})*"
